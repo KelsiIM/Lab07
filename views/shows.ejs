@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1> <%= title %> </h1>
+        <p>Web app is built using node, express and mysql to show MY TV shows. </p>
+    </header>
+
+    <main>
+        <% rowdata.forEach((tvshow) => { %>
+         <p>
+            <%= tvshow.showname %>
+
+            <span>
+                <a href="/row?tvid=<%=tvshow.id%>">details</a>
+            </span>
+
+         </p>
+        <% }) %>
+    </main>
+    
+</body>
+</html>
